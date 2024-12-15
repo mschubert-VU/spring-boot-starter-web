@@ -1,0 +1,8 @@
+services:
+  web:
+    build:
+      context: .
+    image:
+      springio/gs-spring-boot-docker:latest
+    ports:
+      - "8080:8080"

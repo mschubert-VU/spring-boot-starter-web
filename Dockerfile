@@ -5,6 +5,7 @@ ARG WORKDIR=/app
 
 RUN adduser ${USERNAME}
 WORKDIR ${WORKDIR}
+EXPOSE 8080
 COPY --chown=${USERNAME}:${USERNAME} --chmod=700 "${JAR_FILE}" ${WORKDIR}/app.jar
 USER ${USERNAME}
 ENTRYPOINT ["java","-jar","app.jar"]
